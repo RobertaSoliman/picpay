@@ -14,6 +14,7 @@ services:
       - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0 
       - REACT_NATIVE_PACKAGER_HOSTNAME=192.168.15.20
     command: expo start --web
+<<<<<<< HEAD
 
   mongo:
     container_name: picpay_mongo
@@ -46,3 +47,5 @@ services:
     ports:
         - "3306:3306"
 
+=======
+>>>>>>> 26b882c5b765189276c3dc4d3074cb3882d0397d
