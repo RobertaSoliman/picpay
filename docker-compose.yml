@@ -14,3 +14,38 @@ services:
       - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0 
       - REACT_NATIVE_PACKAGER_HOSTNAME=192.168.15.20
     command: expo start --web
+<<<<<<< HEAD
+
+  mongo:
+    container_name: picpay_mongo
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+        - AUTH=yes
+        - MONGODB_ADMIN_USER=admin
+        - MONGODB_ADMIN_PASS=admin
+        - MONGODB_APPLICATION_DATABASE=picpay_db
+        - MONGODB_APPLICATION_USER=picpay
+        - MONGODB_APPLICATION_PASS=admin
+    ports:
+        - "27017:27017"
+
+  mysql:
+    container_name: picpay_mysql
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: mysql:latest
+    environment: 
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=picpay_db
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+      - MYSQL_ALLOW_EMPTY_PASSWORD=false
+      - MYSQL_RANDOM_ROOT_PASSWORD=false
+    ports:
+        - "3306:3306"
+
+=======
+>>>>>>> 26b882c5b765189276c3dc4d3074cb3882d0397d
